@@ -15,6 +15,17 @@ class _OnboardingViewState extends State<OnboardingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomSheet: Row(
+        children: [
+          TextButton(
+              onPressed: (){},
+              child: const Text("Saltar")),
+
+          TextButton(
+              onPressed: (){},
+              child: const Text("Proximo")),
+        ],
+      ),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 15),
         child: PageView.builder(
@@ -30,7 +41,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 15),
                   Text(controller.items[index].description,
-                    style: const TextStyle(color: Colors.grey),textAlign: TextAlign.center,),
+                    style: const TextStyle(color: Colors.grey, fontSize: 18),textAlign: TextAlign.center,),
                 ],
               );
             }),
