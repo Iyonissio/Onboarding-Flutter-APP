@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ola_mundo/Components/color.dart';
+import 'package:ola_mundo/home.dart';
 import 'package:ola_mundo/Onboarding/onboarding_items.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -87,7 +88,9 @@ class _OnboardingViewState extends State<OnboardingView> {
       width: MediaQuery.of(context).size.width * .9,
       height: 55,
       child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Home() ));
+          },
           child: Text(
             "Get Started",
             style: TextStyle(color: Colors.white, fontSize: 16),
